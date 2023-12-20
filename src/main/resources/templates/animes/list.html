@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
     <title>Animes</title>
 </head>
 <body>
 <h1>Animes</h1>
+<tr th:each="anime : ${animes}">
+    <td>
+        <h1 th:text="${anime.titulo}"></h1>
+    </td>
+    <td>
+        <p th:text="${anime.sinopse}"></p>
+    </td>
+    <td><a th:href="${anime.link}">Assistir Sinopse</a></td>
+    <td>
+        <img th:src="${anime.imagem}" alt="Imagem do Anime" width="100" height="100"/>
+    </td>
+    <td><a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a></td>
+    <td><a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a></td>
+</tr>
 
-<table>
-    <tbody>
-    <tr th:each="anime : ${animes}">
-        <td th:text="${anime.titulo}"></td>
-        <td th:text="${anime.sinopse}"></td>
-        <td><a th:href="${anime.link}">Assistir Sinopse</a></td>
-        <td>
-            <img th:src="${anime.imagem}" alt="Imagem do Anime" width="100" height="100"/>
-        </td>
-        <td><a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a></td>
-        <td><a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a></td>
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>
