@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Animes</title>
+</head>
+<body>
+<h2>Lista de Animes</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Sinopse</th>
+        <th>Link</th>
+        <th>Imagem</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="anime : ${animes}">
+        <td th:text="${anime.id}"></td>
+        <td th:text="${anime.titulo}"></td>
+        <td th:text="${anime.sinopse}"></td>
+        <td th:text="${anime.link}"></td>
+        <td th:text="${anime.imagem}"></td>
+        <td><a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a></td>
+        <td><a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/animes/form}">Adicionar Anime</a>
+</body>
+</html>

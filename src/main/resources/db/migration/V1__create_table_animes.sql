@@ -1,0 +1,9 @@
+CREATE TABLE animes (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    sinopse TEXT NOT NULL,
+    link VARCHAR(255) NOT NULL,
+    imagem VARCHAR(255) NOT NULL,
+
+    PRIMARY KEY (id)
+);
