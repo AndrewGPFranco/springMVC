@@ -11,6 +11,7 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #F2F2F2;
 }
 
 /* HEADER */
@@ -39,6 +40,10 @@ a {
     font-weight: 400;
     color: black;
     font-size: 35px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 button {
@@ -79,6 +84,66 @@ button {
 .container-forum-dentro h1 {
     font-family: 'Gagalin';
     font-size: 40px;
+    background-color: black;
 }
 
 /* FIM DO HEADER */
+
+/* BODY */
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* FIM DO BODY */
+
+/* MAIN */
+
+main {
+    text-align: center;
+}
+
+.frase-principal {
+    margin-top: -20px;
+    background-image: url('../images/animes.jpg');
+    background-size: cover;
+}
+
+main h1 {
+    font-family: 'Gagalin';
+    font-size: 100px;
+    background-color: transparent;
+}
+
+.botoes-main {
+    margin-top: 15px;
+}
+
+.botoes-main button {
+    font-family: 'Gagalin';
+    padding: 15px;
+    font-size: 30px;
+}
+
+.btn-assistir {
+    background-color: black;
+    color: white;
+}
+
+.btn-assistir:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.btn-ler {
+    background-color: #0CC0DF;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+.btn-ler:hover {
+    background-color: #000000;
+    color: #0CC0DF;
+    border-radius: 15px;
+}
