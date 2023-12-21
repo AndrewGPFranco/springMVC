@@ -13,8 +13,10 @@
             <img th:src="${anime.imagem}" alt="Imagem do Episódio">
             <h1 th:text="${anime.titulo}"></h1>
             <p th:text="${anime.sinopse}"></p>
-            <a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a>
-            <a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a>
+            <div class="btn-acoes">
+                <a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a>
+                <a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a>
+            </div>
         </div>
     </section>
   </body>

@@ -11,3 +11,21 @@ iframe {
 }
 
 /* card */
+
+.card-anime {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    text-align: center;
+}
+
+.card-anime img {
+    width: 350px;
+    height: 200px;
+}
+
+.btn-acoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
