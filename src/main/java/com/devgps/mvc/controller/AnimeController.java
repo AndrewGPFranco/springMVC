@@ -36,7 +36,10 @@ public class AnimeController {
 
     @GetMapping("episode/{id}")
     public String showById(@PathVariable Long id, Model model) {
-        Anime animes = animeRepository.getReferenceById(id);
+        Anime animes = animeRepository.findById(id).orElse(null);
+        if (animes == null) {
+            return "animes/notfound";
+        }
         model.addAttribute("animes", animes);
         return "animes/episode";
     }

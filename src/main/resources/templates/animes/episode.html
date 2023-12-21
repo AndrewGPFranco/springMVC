@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" th:href="@{/css/episode.css}" />
-    <title>Episode</title>
+    <title>Episódio</title>
   </head>
   <body>
-    <section th:each="anime : ${animes}">
-        <h1 th:text="${anime.titulo}"></h1>
-    </section>
+    <main th:each="anime : ${animes}">
+        <div class="container-iframe">
+            <iframe th:src="${anime.link}" frameborder="0"></iframe>
+            <h1 th:text="${anime.titulo}"></h1>
+        </div>
+        <div class="container-episodes">
+          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
+          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
+          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
+        </div>
+        <div class="container-infos">
+            <h3>Sinopse do Episódio:</h3>
+            <p th:text="${anime.sinopse}"></p>
+        </div>
+    </main>
   </body>
 </html>
