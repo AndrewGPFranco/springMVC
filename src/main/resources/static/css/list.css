@@ -1,0 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #F2F2F2;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+/* card */
