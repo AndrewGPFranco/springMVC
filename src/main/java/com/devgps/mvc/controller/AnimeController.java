@@ -34,6 +34,13 @@ public class AnimeController {
         return "animes/form";
     }
 
+    @GetMapping("episode/{id}")
+    public String showById(@PathVariable Long id, Model model) {
+        Anime animes = animeRepository.getReferenceById(id);
+        model.addAttribute("animes", animes);
+        return "animes/episode";
+    }
+
     @PostMapping("/form")
     public String submitForm(@ModelAttribute Anime anime) {
         animeRepository.save(anime);
