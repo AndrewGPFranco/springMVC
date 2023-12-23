@@ -69,6 +69,10 @@ button {
     width: 250px;
 }
 
+.container-forum-fora:hover {
+    background-color: red;
+}
+
 .container-forum-dentro {
     background-color: black;
     padding: 12px;
@@ -117,7 +121,7 @@ main h1 {
 }
 
 .botoes-main {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .botoes-main a {

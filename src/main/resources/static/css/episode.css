@@ -42,19 +42,12 @@ iframe {
   height: 430px;
 }
 
-.container-iframe p {
-  margin-top: 5px;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgba(0, 255, 255, 0.479);
-}
-
 .container-iframe h1 {
   font-family: "Gagalin";
   font-weight: 200;
   font-size: 30px;
   letter-spacing: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
   color: aqua;
 }
 
