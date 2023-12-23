@@ -5,6 +5,10 @@
     background-color: #F2F2F2;
 }
 
+body {
+    padding: 30px;
+}
+
 iframe {
     width: 560px;
     height: 315px;

@@ -85,8 +85,10 @@ iframe {
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #1b1f23;
 }
 
