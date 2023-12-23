@@ -10,7 +10,7 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
+    background-color: #141414;
     color: white;
 }
 
@@ -27,9 +27,12 @@ iframe {
 }
 
 .container-iframe h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gagalin';
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 5px;
     margin-top: 5px;
-    color: aqua;
+    color: rgb(255, 255, 255);
 }
 
 .container-infos {
@@ -54,3 +57,13 @@ iframe {
     cursor: pointer;
     border-radius: 10px;
 }
+
+.line {
+    width: 310px;
+    margin-top: 15px;
+    height: 2px;
+    background-color: white;
+}
+
+/* Inicio do Header */
+

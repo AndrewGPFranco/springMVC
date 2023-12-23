@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geek OP</title>
     <link rel="stylesheet" th:href="@{/css/episode.css}" />
-    <title>Episódio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
+    <header>
+      <div>
+      </div>
+      <div>
+        <a href="/">Arcos</a>
+        <a href="#">Cápitulos</a>
+        <a href="#">Análise</a>
+      </div>
+      <div></div>
+    </header>
+
     <main th:each="anime : ${animes}">
-        <div class="container-iframe">
-            <iframe th:src="${anime.link}" frameborder="0"></iframe>
-            <h1 th:text="${anime.titulo}"></h1>
-        </div>
-        <div class="container-episodes">
-          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
-          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
-          <img th:src="${anime.imagem}" alt="Imagem do Episódio">
-        </div>
-        <div class="container-infos">
-            <h3>Sinopse do Episódio:</h3>
-            <p th:text="${anime.sinopse}"></p>
-        </div>
+      <div class="container-iframe">
+        <iframe th:src="${anime.link}" frameborder="0"></iframe>
+        <h1 th:text="${anime.titulo}"></h1>
+      </div>
+      <div class="container-episodes">
+        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
+        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
+        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
+        <div class="line"></div>
+      </div>
     </main>
   </body>
 </html>
