@@ -3,30 +3,43 @@
   <head>
     <title>Geek OP</title>
     <link rel="stylesheet" th:href="@{/css/episode.css}" />
+    <link rel="shortcut icon" href="https://i.ibb.co/TggmBSx/logo.png" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
     <header>
-      <div>
-        <img src="https://i.ibb.co/TggmBSx/logo.png" alt="">
-      </div>
-      <div>
+      <div class="imageLogo">
+        <a href="/"><img src="https://i.ibb.co/TggmBSx/logo.png" alt="Logo do Site"></a>
         <a href="/">Arcos</a>
         <a href="#">Cápitulos</a>
         <a href="#">Análise</a>
       </div>
-      <div></div>
+      <div class="containerIcons" th:each="anime : ${animes}">
+        <a href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+          </svg>
+        </a>
+        <a th:href="${anime.link}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </a>
+        <img src="https://ovicio.com.br/wp-content/uploads/2021/11/20211119-ovicio-one-piece-cosplay-luffy.jpg" alt="Foto de Perfil">
+      </div>
     </header>
 
     <main th:each="anime : ${animes}">
       <div class="container-iframe">
         <iframe th:src="${anime.link}" frameborder="0"></iframe>
         <h1 th:text="${anime.titulo}"></h1>
+        <p th:text="${anime.sinopse}"></p>
       </div>
       <div class="container-episodes">
-        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
-        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
-        <img th:src="${anime.imagem}" alt="Imagem do Episódio" />
+        <img src="https://c4.wallpaperflare.com/wallpaper/923/720/848/anime-one-piece-monkey-d-luffy-nami-one-piece-wallpaper-preview.jpg" alt="Imagem de One Piece" />
+        <img src="https://images.alphacoders.com/846/thumb-440-84631.webp" alt="Imagem de One Piece" />
+        <img src="https://c4.wallpaperflare.com/wallpaper/114/1008/41/one-piece-monkey-d-luffy-hd-wallpaper-preview.jpg" alt="Imagem de One Piece" />
         <div class="line"></div>
       </div>
     </main>
