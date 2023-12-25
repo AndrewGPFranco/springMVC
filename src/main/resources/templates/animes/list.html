@@ -9,18 +9,22 @@
   </head>
   <body>
     <h1>Lista de Vídeos</h1>
-    <div th:each="anime : ${animes}" class="card">
-      <div class="header">
-        <img th:src="${anime.imagem}" alt="Imagem do Vídeo">
+    <section class="container">
+      <div th:each="anime : ${animes}" class="card">
+        <div class="header">
+          <img th:src="${anime.imagem}" alt="Imagem do Vídeo">
+        </div>
+        <div class="info">
+          <p th:text="${anime.titulo}" class="title"></p>
+          <p th:text="${anime.sinopse}"></p>
+        </div>
+        <div class="footer">
+          <p class="tag">#GPS DEV</p>
+          <a th:href="@{/animes/episode/{id}(id=${anime.id})}" class="action">Assistir</a>
+          <!-- <a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a>
+          <a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a> -->
+        </div>
       </div>
-      <div class="info">
-        <p th:text="${anime.titulo}" class="title"></p>
-        <p th:text="${anime.sinopse}"></p>
-      </div>
-      <div class="footer">
-        <p class="tag">#GPS DEV</p>
-        <a th:href="@{/animes/episode/{id}(id=${anime.id})}" class="action">Assistir</a>
-      </div>
-    </div>
+    </section>
   </body>
 </html>
