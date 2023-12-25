@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Formulário de Anime</title>
-</head>
-<body>
-<h2>Formulário de Anime</h2>
-<form th:action="@{/animes/form}" method="post" th:object="${anime}">
-    <label>Título: <input type="text" th:field="*{titulo}" /></label><br/>
-    <label>Sinopse: <input type="text" th:field="*{sinopse}" /></label><br/>
-    <label>Link: <input type="text" th:field="*{link}" /></label><br/>
-    <label>Imagem: <input type="text" th:field="*{imagem}" /></label><br/>
-    <input type="submit" value="Salvar"/>
-</form>
-<a th:href="@{/animes}">Voltar para a Lista de Animes</a>
-
-</body>
+<html>
+  <head>
+    <title>Formulário</title>
+    <link rel="stylesheet" th:href="@{/css/form.css}" />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/TggmBSx/logo.png"
+      type="image/x-icon"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <section class="container">
+      <img src="https://mfiles.alphacoders.com/100/1002559.png" alt="Wallpaper do Luffy encarando o Kaido na sua versão Dragão">
+      <form
+        th:action="@{/animes/form}"
+        method="post"
+        th:object="${anime}"
+        class="form"
+      >
+        <p class="title">Registrar</p>
+        <p class="message">Registre Aqui um Episódio Marcante</p>
+        <label>
+          <input
+            type="text"
+            required
+            autocomplete="off"
+            th:field="*{sinopse}"
+            class="input"
+          />
+          <span>Título</span>
+        </label>
+        <label>
+          <input
+            type="text"
+            required
+            autocomplete="off"
+            th:field="*{sinopse}"
+            class="input"
+          />
+          <span>Sinopse</span>
+        </label>
+        <label>
+          <input
+            type="text"
+            required
+            autocomplete="off"
+            th:field="*{link}"
+            class="input"
+          />
+          <span>Link</span>
+        </label>
+        <label>
+          <input
+            type="text"
+            required
+            autocomplete="off"
+            th:field="*{imagem}"
+            class="input"
+          />
+          <span>Imagem</span>
+        </label>
+        <button class="submit" type="submit">Salvar</button>
+      </form>
+    </section>
+  </body>
 </html>
