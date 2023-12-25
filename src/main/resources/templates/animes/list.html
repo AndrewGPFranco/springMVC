@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" th:href="@{/css/list.css}" />
+    <link rel="shortcut icon" href="https://i.ibb.co/TggmBSx/logo.png" type="image/x-icon">
     <title>Lista de Episódios</title>
   </head>
   <body>
-    <section>
-        <h2>Lista de Episódios:</h2>
-        <div th:each="anime : ${animes}" class="card-anime">
-            <img th:src="${anime.imagem}" alt="Imagem do Episódio">
-            <h1 th:text="${anime.titulo}"></h1>
-            <p th:text="${anime.sinopse}"></p>
-            <div class="btn-acoes">
-                <a href="/">Inicio</a>
-                <a th:href="@{/animes/edit/{id}(id=${anime.id})}">Editar</a>
-                <a th:href="@{/animes/delete/{id}(id=${anime.id})}">Excluir</a>
-                <a th:href="@{/animes/episode/{id}(id=${anime.id})}">Assistir</a>
-            </div>
-        </div>
-    </section>
+    <h1>Lista de Vídeos</h1>
+    <div th:each="anime : ${animes}" class="card">
+      <div class="header">
+        <img th:src="${anime.imagem}" alt="Imagem do Vídeo">
+      </div>
+      <div class="info">
+        <p th:text="${anime.titulo}" class="title"></p>
+        <p th:text="${anime.sinopse}"></p>
+      </div>
+      <div class="footer">
+        <p class="tag">#GPS DEV</p>
+        <a th:href="@{/animes/episode/{id}(id=${anime.id})}" class="action">Assistir</a>
+      </div>
+    </div>
   </body>
 </html>
