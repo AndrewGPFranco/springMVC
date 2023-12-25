@@ -85,6 +85,11 @@ button {
     text-align: center;
 }
 
+.container-forum-dentro a {
+    text-decoration: none;
+    color: white;
+}
+
 .container-forum-dentro h1 {
     font-family: 'Gagalin';
     font-size: 40px;
