@@ -7,4 +7,4 @@
 
 ## Ultima Atualização: 12/25/2023
 
-[!["Apresentação - v2"]("https://i.ibb.co/51PZ7Db/list.png")]("https://vimeo.com/897747118")
+[!["Apresentação - v2"](https://i.ibb.co/51PZ7Db/list.png)](https://vimeo.com/897747118)
