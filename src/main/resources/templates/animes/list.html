@@ -8,6 +8,18 @@
     <title>Lista de Episódios</title>
   </head>
   <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <a href="/"><img src="https://i.ibb.co/TggmBSx/logo.png" alt="Logo do Site" /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/animes/form">Cadastrar <br> Novo Episódio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <h1>Lista de Vídeos</h1>
     <section class="container">
       <div th:each="anime : ${animes}" class="card">

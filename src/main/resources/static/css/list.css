@@ -110,3 +110,31 @@ body h1 {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+
+/* Header */
+
+header {
+  display: flex;
+  padding: 0px 30px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
