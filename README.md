@@ -4,6 +4,7 @@
 ![Imagem do Site](https://i.ibb.co/51PZ7Db/list.png)
 ![Imagem do Site](https://i.ibb.co/zhZ2M9Z/episode.png)
 ![Imagem do Site](https://i.ibb.co/sq3k72n/form.png)
+![Imagem do Site](https://i.ibb.co/BcTs4d9/notfound.png)
 
 ## Ultima Atualização: 12/25/2023
 
